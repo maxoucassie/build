@@ -18,7 +18,8 @@
   "scripts": {
     "build": "webpack --progress --colors",
     "watch": "webpack --progress --colors --watch",
-    "start": "node server.js"
+    "start": "node server.js",
+    "package": "webpack --progress --colors -p"
   },
   "babel": {
     "presets": [
