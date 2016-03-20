@@ -8,7 +8,6 @@ class HelloWorld extends React.Component {
     }
 }
 
-
 HelloWorld.propTypes = {
     name: React.PropTypes.string
 };
