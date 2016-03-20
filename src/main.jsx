@@ -1,6 +1,6 @@
-import 'babel-polyfill';
 import ReactDOM from 'react-dom';
-import HelloWorld from './helloWorld.jsx';
+import React from 'react';
+import HelloWorld from './helloWorld';
 
 ReactDOM.render(
     <HelloWorld />,

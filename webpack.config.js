@@ -1,6 +1,6 @@
 var path = require('path');
 var config = {
-    entry: ['babel-polyfill', path.resolve(__dirname, 'src/main.jsx')],
+    entry: [path.resolve(__dirname, 'src/main.jsx')],
     output: {
         path: path.resolve(__dirname, 'public/build'),
         filename: 'bundle.js'
@@ -16,10 +16,6 @@ var config = {
             query: {
                 presets: ['es2015', 'react']
             }
-        }, {
-            test: require.resolve("react"), loader: "expose?React"
-        }, {
-            test: require.resolve("react-dom"), loader: "expose?ReactDOM"
         }]
     }
 };
