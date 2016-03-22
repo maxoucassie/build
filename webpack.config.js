@@ -1,11 +1,10 @@
 var path = require('path');
+var webpack = require('webpack');
 var config = {
-    entry: [path.resolve(__dirname, 'src/main.jsx')],
+    entry: ['babel-polyfill',path.resolve(__dirname, 'src/main.jsx')],
     output: {
         path: path.resolve(__dirname, 'public/build'),
         filename: 'bundle.js',
-        library: 'customLib',
-        libraryTarget: 'var'
     },
     resolve: {
         extensions: ['', '.js', '.jsx']
@@ -26,6 +25,11 @@ var config = {
             loader: 'style!css!sass'
         }]
     },
+    plugins: [
+        new webpack.ProvidePlugin({
+            fetch: 'imports?this=>global!exports?global.fetch!whatwg-fetch'
+        })
+    ]
 };
 
 module.exports = config;

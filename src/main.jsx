@@ -1,11 +1,5 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
-import HelloWorld from './helloWorld';
+import Container from './container';
 
-const lib = {
-    helloWorld: <HelloWorld />
-};
-
-ReactDOM.render(<HelloWorld />, document.getElementById('main'));
-
-module.exports = lib;
+ReactDOM.render(<Container />, document.getElementById('main'));

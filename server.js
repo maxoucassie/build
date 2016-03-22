@@ -7,6 +7,10 @@ app.set('host', (process.env.HOST || '127.0.0.1'));
 
 app.use('/', express.static(path.join(__dirname, 'public')));
 
+app.get('/hello', function (req, res) {
+  res.json({ string: 'World from WS' });
+});
+
 app.listen(app.get('port'), app.get('host'), function () {
   console.log('Server started: ' + app.get('host') + ':' + app.get('port') + '/');
 });
