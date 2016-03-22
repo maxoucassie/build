@@ -18,8 +18,14 @@ var config = {
             query: {
                 presets: ['es2015', 'react']
             }
+        },{
+            test: /\.css$/,
+            loader: 'style!css'
+        },{
+            test: /\.scss$/,
+            loader: 'style!css!sass'
         }]
-    }
+    },
 };
 
 module.exports = config;
